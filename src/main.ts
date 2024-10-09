@@ -14,3 +14,18 @@ button1.innerHTML = "click";
 button1.style.position = "absolute"; //this came from brace
 button1.style.top = "500px";
 app.append(button1);
+
+
+const displayScore = document.createElement("h2");
+displayScore.innerHTML = "0";
+app.append(displayScore);
+
+
+let num_clicks = 0;
+button1.onclick = () => {
+    num_clicks++;
+    displayScore.innerHTML = num_clicks.toString();
+};
+
+
+
